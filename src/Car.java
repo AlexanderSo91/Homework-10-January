@@ -1,59 +1,51 @@
 public class Car extends Transport {
 
-    public final String brand;
-    public final String model;
-    private final int year;
-    private String country;
-    public String color;
-    public String maxSpeed;
+    private String transmission;
+    private String bodyType;
+    private String registrationNumber;
+    private int seatsCount;
 
-    public Car() {
-        super(brand,model,year,country,color,maxSpeed);
+    private static final String DEFAULT_VALUE = "default";
 
+    public Car(String brand, String model, int year, String country, String color, String max, String maxSpeed, String transmission, String bodyType, String registrationNumber, int seatsCount) {
+        super(brand, model, year, country, color, max, maxSpeed);
+        this.transmission = transmission;
+        this.bodyType = bodyType;
+        this.registrationNumber = registrationNumber;
+        this.seatsCount = seatsCount;
     }
 
-    public String getBrand() {
-        return brand;
+
+    public String getTransmission() {
+        return transmission;
     }
 
-    public String getModel() {
-        return model;
+    public void setTransmission(String transmission) {
+        this.transmission = transmission;
     }
 
-    public int getYear() {
-        return year;
+    public String getBodyType() {
+        return bodyType;
     }
 
-    public String getCountry() {
-        return country;
+    public void setBodyType(String bodyType) {
+        this.bodyType = bodyType;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public String getRegistrationNumber() {
+        return registrationNumber;
     }
 
-    public String getColor() {
-        return color;
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
     }
 
-    public void setColor(String color) {
-        if (color == null || color.isEmpty()) {
-            this.color = color;
-        } else {
-            this.color = color;
-        }
+    public int getSeatsCount() {
+        return seatsCount;
     }
 
-    public String getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    public void setMaxSpeed(String maxSpeed) {
-        if (maxSpeed == null || maxSpeed.isEmpty()) {
-            this.maxSpeed = maxSpeed;
-        } else {
-            this.maxSpeed = maxSpeed;
-        }
+    public void setSeatsCount(int seatsCount) {
+        this.seatsCount = seatsCount;
     }
 }
 

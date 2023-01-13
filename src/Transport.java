@@ -1,14 +1,33 @@
 public class Transport {
-    public static void main(String[] args) {
 
+    private final String brand;
+    private final String model;
+    private final int year;
+    private final String country;
+    private String color;
+    private String maxSpeed;
+
+    private static final String DEFAULT_VALUE = "default";
+
+
+    public Transport(String brand, String model, int year, String country, String color, String max, String maxSpeed) {
+
+        if (brand == null || brand.isBlank()) {
+            this.brand = DEFAULT_VALUE;
+        } else {
+            this.brand = brand;
+        }
+        if (model == null || model.isBlank()) {
+            this.model = DEFAULT_VALUE;
+        } else {
+            this.model = brand;
+        }
+        this.year = year;
+        this.country = country;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
     }
 
-    public final String brand;
-    public final String model;
-    private final int year;
-    private String country;
-    public String color;
-    public String maxSpeed;
 
     public String getBrand() {
         return brand;
@@ -21,12 +40,9 @@ public class Transport {
     public int getYear() {
         return year;
     }
+
     public String getCountry() {
         return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     public String getColor() {
@@ -34,7 +50,11 @@ public class Transport {
     }
 
     public void setColor(String color) {
-        this.color = color;
+        if (color == null || color.isBlank()) {
+            this.color = DEFAULT_VALUE;
+        } else {
+            this.color = color;
+        }
     }
 
     public String getMaxSpeed() {
@@ -42,28 +62,14 @@ public class Transport {
     }
 
     public void setMaxSpeed(String maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
-
-
-    public Transport(String brand, String model, int year, String country, String color, String max, String maxSpeed) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
-        this.country = country;
-        if (color == null || color.isEmpty()) {
-            this.color = color;
-        } else {
-            this.color = color;
-        }
-        if (maxSpeed == null || maxSpeed.isEmpty()) {
-            this.maxSpeed = maxSpeed;
+        if (maxSpeed == null || maxSpeed.isBlank()) {
+            this.maxSpeed = DEFAULT_VALUE;
         } else {
             this.maxSpeed = maxSpeed;
         }
+
+
     }
-
-
 }
 
 

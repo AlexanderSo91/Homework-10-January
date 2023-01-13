@@ -1,10 +1,11 @@
-public class Bus {
-    public static void main(String[] args) {
-        Bus Iveco = new Bus();
-        Bus Mercedes = new Bus();
-        Bus VW = new Bus();
+public class Bus extends Transport {
 
 
 
+    public Bus(String brand, String model, int year, String country, String color, String max, String maxSpeed) {
+        super(brand, model, year, country, color, max, maxSpeed);
     }
+
 }
+
+
