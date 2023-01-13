@@ -7,6 +7,7 @@ public class Car extends Transport {
 
     private static final String DEFAULT_VALUE = "default";
 
+
     public Car(String brand, String model, int year, String country, String color, String max, String maxSpeed, String transmission, String bodyType, String registrationNumber, int seatsCount) {
         super(brand, model, year, country, color, max, maxSpeed);
         this.transmission = transmission;
@@ -46,6 +47,16 @@ public class Car extends Transport {
 
     public void setSeatsCount(int seatsCount) {
         this.seatsCount = seatsCount;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "transmission='" + transmission + '\'' +
+                ", bodyType='" + bodyType + '\'' +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                ", seatsCount=" + seatsCount +
+                '}';
     }
 }
 

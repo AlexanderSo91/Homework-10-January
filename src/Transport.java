@@ -70,7 +70,21 @@ public class Transport {
 
 
     }
+
+    @Override
+    public String toString() {
+        return "Transport{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                ", country='" + country + '\'' +
+                ", color='" + color + '\'' +
+                ", maxSpeed='" + maxSpeed + '\'' +
+                '}';
+    }
 }
+
+
 
 
 
